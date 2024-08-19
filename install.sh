@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the branch name
-BRANCH="master"
+BRANCH="initial-version"
 
 # Define the URL of the pyinfo file on the specified branch of the GitHub repository
 GITHUB_URL="https://raw.githubusercontent.com/jvrck/pyinfo/$BRANCH/pyinfo"
