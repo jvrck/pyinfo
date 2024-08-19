@@ -16,8 +16,14 @@ jobs:
       run: |
         sudo bash install
 
-    - name: Run pyinfo script
+    - name: Run pyinfo
       run: |
+        ./pyinfo
+
+    - name: Create virtual environment and run pyinfo
+      run: |
+        python3 -m venv venv
+        source venv/bin/activate
         ./pyinfo
 
     - name: Display output
