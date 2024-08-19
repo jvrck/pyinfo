@@ -33,3 +33,4 @@ The script will display:
 - Python `sys.path`
 - Python executable location
 - Detailed Python version info
+
