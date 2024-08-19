@@ -1,0 +1,31 @@
+name: Test pyinfo
+
+on: 
+  push:
+  pull_request:
+
+jobs:
+  Run-pyinfo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@main
+
+    - name: Install dependencies
+      run: |
+        sudo bash install
+
+    - name: Run pyinfo
+      run: |
+        ./pyinfo
+
+    - name: Create virtual environment and run pyinfo
+      run: |
+        python3 -m venv venv
+        source venv/bin/activate
+        ./pyinfo
+
+    - name: Display output
+      run: |
+        echo "pyinfo script executed successfully."
